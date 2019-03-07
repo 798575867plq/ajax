@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vue+axios</title>
+</head>
+
+<body>
+  <div id="a1">
+    <input type="text" v-model="echo">
+    <button @click="test01()">测试1</button>
+    <span>参数echo={{echo}}</span>
+    <div>
+      <pre v-html="result"></pre>
+    </div>
+  </div>
+  
+
+
+  <script src="js/axios.min.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/j2.js"></script>
+</body>
+
+</html>
