@@ -34,12 +34,26 @@
     el: '#a1',
     data: {
       echo: 'vue发送echo数据',
-      result: ''
+      result: '',
+      types: []
     },
     methods: {
       test01: function() {
         sendAjax('/', { echo: this.echo }, function(data) {
           a1.result = huhuiyu.formatJson(data, true);
+        });
+      },
+      query: function() {
+        sendAjax('/teachtype/queryAll', {}, function(data) {
+          if (!data.success) {
+            alert(data.message);
+            return;
+          }
+          a1.types = data.datas.list;
+        });
+
+        DataService.sendAjax('/teachtype/queryAll', {}, function(data) {
+          console.log(data);
         });
       }
     }

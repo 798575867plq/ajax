@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="tbAdmin.username" placeholder="输入用户名">
+    <input type="password" v-model="tbAdmin.password" placeholder="输入密码">
+    <button @click="login();">登陆</button>
+    <div v-text="error"></div>
+  </div>
+
+
+  <script src="js/axios.min.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/data-service.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

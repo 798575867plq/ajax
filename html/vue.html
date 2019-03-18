@@ -16,14 +16,35 @@
     <div>
       <pre v-html="result"></pre>
     </div>
+    <div>
+      <button @click="query()">数据查询</button>
+    </div>
+    <table>
+      <tr>
+        <td>编号</td>
+        <td>名称</td>
+        <td>iconfont</td>
+        <td>描述</td>
+        <td>是否启用</td>
+      </tr>
+      <tr v-for="type in types">
+        <td>{{type.ttid}}</td>
+        <td>{{type.typeName}}</td>
+        <td>{{type.iconfont}}</td>
+        <td>{{type.info}}</td>
+        <td>{{type.enable}}</td>
+      </tr>
+    </table>
   </div>
-  
+
 
 
   <script src="js/axios.min.js"></script>
   <script src="js/vue.min.js"></script>
   <script src="js/util.js"></script>
+  <script src="js/data-service.js"></script>
   <script src="js/j2.js"></script>
+
 </body>
 
 </html>
